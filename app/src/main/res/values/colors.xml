@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="japanese_indigo">#233D4D</color>
+    <color name="princeton_orange">#FE7F2D</color>
+    <color name="sunglow">#FCCA46</color>
+    <color name="olivine">#A1C181</color>
+    <color name="steel_teal">#619B8A</color>
+</resources>
