@@ -4,4 +4,9 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="Capital">Capital</string>
+    <string name="Region">Region</string>
+    <string name="recycler_to_details">recycler_to_details</string>
+    <string name="google_api_key">AIzaSyAA9JInOLgYUZaSh3_7vCJUjnrgnnvepJs</string>
+    <string name="rapid_api_key">4f307ec897msh36eefa2f69000f0p11b52cjsne54eaf83118b</string>
 </resources>

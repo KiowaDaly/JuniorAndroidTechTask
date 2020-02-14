@@ -1,8 +1,10 @@
 package com.kiowa.juniorandroidtechtask.adapter
 
+import android.graphics.drawable.Drawable
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.annotation.DrawableRes
 import androidx.fragment.app.FragmentManager
 import androidx.recyclerview.widget.RecyclerView
 import com.kiowa.juniorandroidtechtask.ExtraDetailsDialog
@@ -32,6 +34,8 @@ class CountryAdapter(private val apiResponse: Array<Country>, private var manage
         holder.itemView.region.text = apiResponseValue.region
 
         holder.itemView.setOnClickListener {
+            var transitionName = "recycler_to_details"
+
             val dialog = ExtraDetailsDialog(apiResponseValue)
             dialog.show(manager,"ExtraDetailsFragment")
 

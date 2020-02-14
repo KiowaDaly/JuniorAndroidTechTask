@@ -15,6 +15,7 @@ import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
 import com.kiowa.juniorandroidtechtask.models.Country
 import kotlinx.android.synthetic.main.additional_country_info.view.*
+import java.text.DecimalFormat
 
 
 class ExtraDetailsDialog(private var country: Country) : DialogFragment(),OnMapReadyCallback {
@@ -27,6 +28,7 @@ class ExtraDetailsDialog(private var country: Country) : DialogFragment(),OnMapR
     private lateinit var mArea : TextView
     private lateinit var mGoogleMap : MapView
     private lateinit var mapViewLocation : GoogleMap
+    private val customParser = CustomParser()
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         mButton = view.backToList
@@ -42,8 +44,8 @@ class ExtraDetailsDialog(private var country: Country) : DialogFragment(),OnMapR
         }
         mName.text=country.name
         mRegion.text=country.region
-        mArea.text=country.area.toString()
-        mPopulation.text=country.population.toString()
+        mArea.text=customParser.parseArea(country.area)
+        mPopulation.text=customParser.parsePopulation(country.population)
         mCapital.text=country.capital
 
 
@@ -61,11 +63,13 @@ class ExtraDetailsDialog(private var country: Country) : DialogFragment(),OnMapR
             isZoomGesturesEnabled = true
             isCompassEnabled = false
         }
+        //below is added to circumvent issues with the API not returning a LatLng for one specific region
         val latLng : LatLng = if(country.latlng.isEmpty()){
             LatLng(19.055494,-175.216251)
         }else{
             LatLng(country.latlng[0],country.latlng[1])
         }
+
         //place marker
 
         val markerOptions = MarkerOptions().also {
@@ -92,8 +96,9 @@ class ExtraDetailsDialog(private var country: Country) : DialogFragment(),OnMapR
         val dialog =dialog
         if(dialog!=null){
             val width = ViewGroup.LayoutParams.MATCH_PARENT
-            val heigth = ViewGroup.LayoutParams.MATCH_PARENT
-            dialog.window?.setLayout(width,heigth)
+            val height = ViewGroup.LayoutParams.MATCH_PARENT
+            dialog.window?.setLayout(width,height)
         }
     }
+
 }

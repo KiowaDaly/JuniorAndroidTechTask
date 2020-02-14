@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
         getCountryData()
     }
     private fun getCountryData(){
-        val key = "4f307ec897msh36eefa2f69000f0p11b52cjsne54eaf83118b"
+        val key = resources.getString(R.string.rapid_api_key)
         val url = "https://restcountries-v1.p.rapidapi.com/all"
         Log.i("Country:","Attempting to retrieve country data")
 

@@ -6,8 +6,8 @@
         android:topLeftRadius="10dp"
         android:bottomRightRadius="10dp"
         />
-    <gradient android:startColor="@color/letsGetCheckedWebsiteBanner"
-        android:endColor="@color/letsGetCheckedWebsiteBanner"
-        android:angle="45"/>
+    <gradient android:startColor="@color/steel_teal"
+        android:endColor="@color/teal_darker"
+        android:angle="135"/>
 
 </shape>

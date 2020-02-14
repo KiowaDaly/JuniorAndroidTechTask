@@ -7,5 +7,13 @@
     <color name="princeton_orange">#FE7F2D</color>
     <color name="sunglow">#FCCA46</color>
     <color name="olivine">#A1C181</color>
-    <color name="steel_teal">#619B8A</color>
+    <color name="steel_teal">#3C646B</color>
+    <color name="blue">#3d80cc</color>
+    <color name="indigo">#6610f2</color>
+    <color name="purple">#6f42c1</color>
+    <color name="teal">#16cbdb</color>
+    <color name="teal_dark">#00b1c2</color>
+    <color name="teal_darker">#00a4b3</color>
+    <color name="letsGetCheckedWebsiteBanner">#007990</color>
+
 </resources>

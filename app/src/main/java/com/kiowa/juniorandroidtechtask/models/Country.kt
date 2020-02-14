@@ -1,6 +1,6 @@
 package com.kiowa.juniorandroidtechtask.models
 
-data class Country(var name:String,var capital:String,var region:String,var area:Double,var population : Double,var latlng:Array<Double>) {
+data class Country(var name:String,var capital:String,var region:String,var area:Double,var population : Long,var latlng:Array<Double>) {
     override fun equals(other: Any?): Boolean {
         if (this === other) return true
         if (javaClass != other?.javaClass) return false
